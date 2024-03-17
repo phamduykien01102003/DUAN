@@ -1,8 +1,8 @@
 <?php
-function insert_product($name_product, $id_brand, $id_color, $id_sport, $id_size, $id_catergory, $img_product, $sale, $stock, $quanity, $date_product, $view, $description)
+function insert_product($name_product, $id_brand, $id_color, $id_sport, $id_size, $id_catergory, $img_product, $sale, $price, $quanity, $date_product, $view, $description)
 {
-    $sql = "INSERT INTO product(name_product,id_brand,id_color,id_sport,id_size,id_catergory,img_product,sale,stock,quanity,date_product,view,description) 
-    VALUES('$name_product','$id_brand','$id_color','$id_sport','$id_size','$id_catergory','$img_product','$sale','$stock','$quanity','$date_product','$view','$description')";
+    $sql = "INSERT INTO product(name_product,id_brand,id_color,id_sport,id_size,id_catergory,img_product,sale,price,quanity,date_product,view,description) 
+    VALUES('$name_product','$id_brand','$id_color','$id_sport','$id_size','$id_catergory','$img_product','$sale','$price','$quanity','$date_product','$view','$description')";
     pdo_execute($sql);
 }
 
@@ -47,7 +47,6 @@ function loadall_product($kyw, $id_brand)
     $sql .= "  ORDER BY id_product DESC";
     $listproduct = pdo_query($sql);
     return $listproduct;
-    // $sql="SELECT tt.*,dm.ten_danh_muc FROM khoahoc tt JOIN danhmuckhoahoc dm ON tt.id_danh_muc = dm.id_danh_muc  ORDER BY id DESC";
 }
 
 
