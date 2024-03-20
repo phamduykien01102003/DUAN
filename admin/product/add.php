@@ -95,13 +95,12 @@
     </div>
 
     <div class="col-md-4 mb-3">
-<<<<<<< HEAD
+
         <label for="inputPassword4" class="form-label">PRICE</label>
-        <input type="text" class="form-control"  name="price">
-=======
+
         <label for="inputPassword4" class="form-label">price</label>
         <input type="text" class="form-control" name="price">
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
     </div>
 
     <div class="col-md-4 mb-3">

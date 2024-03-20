@@ -31,37 +31,31 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id_brand']) && ($_GET['id_brand'] > 0)) {
                 delete_brand($_GET['id_brand']);
             }
-<<<<<<< HEAD
-                $listbrand=loadall_brand();
-                include "brand/list.php";
-                break;    
-        case 'editbrand':
-            if(isset($_GET['id_brand'])&&($_GET['id_brand']>0)){
-                $brand=loadone_brand($_GET['id_brand']);
-            }
-            include "brand/update.php";
-            break;
-        case 'updatebrand':
-            if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
-                $name_brand=$_POST['name_brand'];
-                $id_brand=$_POST['id_brand'];
-                update_brand($name_brand,$id_brand);              
-            }
-            $listbrand=loadall_brand();
-            include "brand/list.php";
-            break;
-        //size 
-        case 'listsize':  
-            $listsize = loadall_size();    
-=======
             $listbrand = loadall_brand();
             include "brand/list.php";
             break;
+            case 'editbrand':
+                if(isset($_GET['id_brand'])&&($_GET['id_brand']>0)){
+                    $brand=loadone_brand($_GET['id_brand']);
+                }
+                include "brand/update.php";
+                break;
+            case 'updatebrand':
+                if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
+                    $name_brand=$_POST['name_brand'];
+                    $id_brand=$_POST['id_brand'];
+                    update_brand($name_brand,$id_brand);              
+                }
+                $listbrand=loadall_brand();
+                include "brand/list.php";
+                break;    
+
+
 
             //size 
         case 'listsize':
             $listsize = loadall_size();
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
             include "size/list.php";
             break;
         case 'addsize':
@@ -76,7 +70,6 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id_size']) && ($_GET['id_size'] > 0)) {
                 delete_size($_GET['id_size']);
             }
-<<<<<<< HEAD
                 $listsize=loadall_size();
                 include "size/list.php";
                 break; 
@@ -98,7 +91,7 @@ if (isset($_GET['act'])) {
         //sport
         case 'listsport':  
             $listsport = loadall_sport();        
-=======
+
             $listsize = loadall_size();
             include "size/list.php";
             break;
@@ -106,7 +99,7 @@ if (isset($_GET['act'])) {
             //sport
         case 'listsport':
             $listsport = loadall_sport();
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
             include "sport/list.php";
             break;
         case 'addsport':
@@ -121,7 +114,7 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id_sport']) && ($_GET['id_sport'] > 0)) {
                 delete_sport($_GET['id_sport']);
             }
-<<<<<<< HEAD
+
                 $listsport = loadall_sport();    
                 include "sport/list.php";
                 break; 
@@ -145,14 +138,14 @@ if (isset($_GET['act'])) {
         //color
         case 'listcolor':  
             $listcolor = loadall_color();        
-=======
+
             $listsport = loadall_sport();
             include "sport/list.php";
             break;
             //color
         case 'listcolor':
             $listcolor = loadall_color();
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
             include "color/list.php";
             break;
         case 'addcolor':
@@ -167,7 +160,6 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id_color']) && ($_GET['id_color'] > 0)) {
                 delete_color($_GET['id_color']);
             }
-<<<<<<< HEAD
                 $listcolor = loadall_color();    
                 include "color/list.php";
                 break;   
@@ -189,7 +181,7 @@ if (isset($_GET['act'])) {
         //catergory    
         case 'listcatergory':   
             $listcatergory = loadall_catergory();      
-=======
+
             $listcolor = loadall_color();
             include "color/list.php";
             break;
@@ -197,7 +189,7 @@ if (isset($_GET['act'])) {
             //catergory    
         case 'listcatergory':
             $listcatergory = loadall_catergory();
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
             include "catergory/list.php";
             break;
         case 'addcatergory':
@@ -212,7 +204,7 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id_catergory']) && ($_GET['id_catergory'] > 0)) {
                 delete_catergory($_GET['id_catergory']);
             }
-<<<<<<< HEAD
+
                 $listcatergory = loadall_catergory();    
                 include "catergory/list.php";
                 break;  
@@ -231,13 +223,12 @@ if (isset($_GET['act'])) {
             $listcatergory=loadall_catergory();
             include "catergory/list.php";
             break;        
-        //product
-=======
+
             $listcatergory = loadall_catergory();
             include "catergory/list.php";
             break;
             //product
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
         case 'listproduct':
             if (isset($_POST['listok']) && ($_POST['listok'])) {
                 $kyw = $_POST['kyw'];
@@ -271,16 +262,12 @@ if (isset($_GET['act'])) {
 
 
 
-                // $file = $_FILES['img_product'];
-                // $img_product = $file['name'];
-                $target_dir = "../upload/";
-                // ---------------- FUNCTION ------------------//
-                $file_name = save_file('img_product', $target_dir);
-                $img = $file_name ? $file_name : "no photo";
 
-                // move_uploaded_file($file['tmp_name'], "../upload/" . $img_product);
+                $file=$_FILES['img_product'];
+                $img_product=$file['name'];
+                move_uploaded_file($file['tmp_name'],"../upload/".$img_product);
 
-                insert_product($name_product, $id_brand, $id_color, $id_sport, $id_size, $id_catergory, $img, $sale, $price, $quanity, $date_product, $view, $description);
+                insert_product($name_product, $id_brand, $id_color, $id_sport, $id_size, $id_catergory, $img_product, $sale, $price, $quanity, $date_product, $view, $description);
                 $thongbao = "them thanh cong";
             }
             $listbrand = loadall_brand();
@@ -300,7 +287,7 @@ if (isset($_GET['act'])) {
             include "product/list.php";
             break;
 
-<<<<<<< HEAD
+
         case 'editproduct':
             if(isset($_GET['id_product'])&&($_GET['id_product']>0)){
                 $product=loadone_product($_GET['id_product']);
@@ -368,22 +355,23 @@ if (isset($_GET['act'])) {
 
         //comment    
         case 'listcomment':      
-=======
-            //comment    
+  //comment    
         case 'listcomment':
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
             include "comment/list.php";
             break;
 
 
-<<<<<<< HEAD
+
         //customer
         case 'listcustomer':   
             $listcustomer = loadall_customer();   
-=======
+            include "customer/list.php";
+            break;
+
             //customer
         case 'listcustomer':
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+
             include "Customer/list.php";
             break;
 

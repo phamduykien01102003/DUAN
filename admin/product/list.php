@@ -25,10 +25,10 @@
                 <th scope="col">mã product</th>
                 <th scope="col">name product</th>
                 <th scope="col">brand </th>
-                <th scope="col">color </th>
-                <th scope="col">sport</th>
+               
+               
                 <th scope="col">size </th>
-                <th scope="col">catergory</th>
+             
                 <th scope="col">view</th>
                 <th scope="col">image</th>
                 <th scope="col"></th>
@@ -53,22 +53,15 @@
                 <td>' . $id_product . '</td>
                 <td>' . $name_product . '</td>
                 <td>' . $name_brand . '</td>
-                <td>' . $name_color . '</td>
-                <td>' . $name_sport . '</td>
+               
                 <td>' . $name_size . '</td>
-<<<<<<< HEAD
+              
+
               
                 <td>'.$view.'</td>
                 <td>'.$hinhanh.'</td>
                 <td> <a href="'.$editproduct.'"  class="btn btn-outline-success">edit</a>
-                <a href="'.$deleteproduct.'"  class="btn btn-outline-success">delete</a></td>
-=======
-                <td>' . $name_catergory . '</td>
-                <td>' . $view . '</td>
-                <td>' . $hinhanh . '</td>
-                <td> <a href="' . $editproduct . '"  class="btn btn-outline-dark">edit</a>
-                <a href="' . $deleteproduct . '"  class="btn btn-outline-dark">delete</a></td>
->>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
+                <a href="' . $deleteproduct . '"  class="btn btn-outline-success">delete</a></td>
                </tr>';
             }
             ?>
