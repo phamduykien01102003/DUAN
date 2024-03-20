@@ -11,26 +11,27 @@ include "../model/customer.php";
 
 include "header.php";
 //controller
-if(isset($_GET['act'])){
-    $act=$_GET['act'];
+if (isset($_GET['act'])) {
+    $act = $_GET['act'];
     switch ($act) {
-        //brand
+            //brand
         case 'listbrand':
             $listbrand = loadall_brand();
             include "brand/list.php";
             break;
-        case 'addbrand':  
-            if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
-                $name_brand=$_POST['name_brand'];
+        case 'addbrand':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $name_brand = $_POST['name_brand'];
                 insert_brand($name_brand);
-                $thongbao="them thanh cong";
+                $thongbao = "them thanh cong";
             }
             include "brand/add.php";
             break;
         case 'deletebrand':
-            if(isset($_GET['id_brand'])&&($_GET['id_brand']>0)){
+            if (isset($_GET['id_brand']) && ($_GET['id_brand'] > 0)) {
                 delete_brand($_GET['id_brand']);
             }
+<<<<<<< HEAD
                 $listbrand=loadall_brand();
                 include "brand/list.php";
                 break;    
@@ -52,20 +53,30 @@ if(isset($_GET['act'])){
         //size 
         case 'listsize':  
             $listsize = loadall_size();    
+=======
+            $listbrand = loadall_brand();
+            include "brand/list.php";
+            break;
+
+            //size 
+        case 'listsize':
+            $listsize = loadall_size();
+>>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
             include "size/list.php";
             break;
-        case 'addsize':   
-            if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
-                $name_size=$_POST['name_size'];
+        case 'addsize':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $name_size = $_POST['name_size'];
                 insert_size($name_size);
-                $thongbao="them thanh cong";
-            }   
+                $thongbao = "them thanh cong";
+            }
             include "size/add.php";
             break;
         case 'deletesize':
-            if(isset($_GET['id_size'])&&($_GET['id_size']>0)){
+            if (isset($_GET['id_size']) && ($_GET['id_size'] > 0)) {
                 delete_size($_GET['id_size']);
             }
+<<<<<<< HEAD
                 $listsize=loadall_size();
                 include "size/list.php";
                 break; 
@@ -87,20 +98,30 @@ if(isset($_GET['act'])){
         //sport
         case 'listsport':  
             $listsport = loadall_sport();        
+=======
+            $listsize = loadall_size();
+            include "size/list.php";
+            break;
+
+            //sport
+        case 'listsport':
+            $listsport = loadall_sport();
+>>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
             include "sport/list.php";
             break;
-        case 'addsport': 
-            if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
-                $name_sport=$_POST['name_sport'];
+        case 'addsport':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $name_sport = $_POST['name_sport'];
                 insert_sport($name_sport);
-                $thongbao="them thanh cong";
-            }      
+                $thongbao = "them thanh cong";
+            }
             include "sport/add.php";
             break;
         case 'deletesport':
-            if(isset($_GET['id_sport'])&&($_GET['id_sport']>0)){
+            if (isset($_GET['id_sport']) && ($_GET['id_sport'] > 0)) {
                 delete_sport($_GET['id_sport']);
             }
+<<<<<<< HEAD
                 $listsport = loadall_sport();    
                 include "sport/list.php";
                 break; 
@@ -124,20 +145,29 @@ if(isset($_GET['act'])){
         //color
         case 'listcolor':  
             $listcolor = loadall_color();        
+=======
+            $listsport = loadall_sport();
+            include "sport/list.php";
+            break;
+            //color
+        case 'listcolor':
+            $listcolor = loadall_color();
+>>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
             include "color/list.php";
             break;
-        case 'addcolor': 
-            if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
-                $name_color=$_POST['name_color'];
+        case 'addcolor':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $name_color = $_POST['name_color'];
                 insert_color($name_color);
-                $thongbao="them thanh cong";
-            }      
+                $thongbao = "them thanh cong";
+            }
             include "color/add.php";
             break;
         case 'deletecolor':
-            if(isset($_GET['id_color'])&&($_GET['id_color']>0)){
+            if (isset($_GET['id_color']) && ($_GET['id_color'] > 0)) {
                 delete_color($_GET['id_color']);
             }
+<<<<<<< HEAD
                 $listcolor = loadall_color();    
                 include "color/list.php";
                 break;   
@@ -159,20 +189,30 @@ if(isset($_GET['act'])){
         //catergory    
         case 'listcatergory':   
             $listcatergory = loadall_catergory();      
+=======
+            $listcolor = loadall_color();
+            include "color/list.php";
+            break;
+
+            //catergory    
+        case 'listcatergory':
+            $listcatergory = loadall_catergory();
+>>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
             include "catergory/list.php";
             break;
         case 'addcatergory':
-            if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
-                $name_catergory=$_POST['name_catergory'];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $name_catergory = $_POST['name_catergory'];
                 insert_catergory($name_catergory);
-                $thongbao="them thanh cong";
-            }        
+                $thongbao = "them thanh cong";
+            }
             include "catergory/add.php";
             break;
         case 'deletecatergory':
-            if(isset($_GET['id_catergory'])&&($_GET['id_catergory']>0)){
+            if (isset($_GET['id_catergory']) && ($_GET['id_catergory'] > 0)) {
                 delete_catergory($_GET['id_catergory']);
             }
+<<<<<<< HEAD
                 $listcatergory = loadall_catergory();    
                 include "catergory/list.php";
                 break;  
@@ -192,21 +232,27 @@ if(isset($_GET['act'])){
             include "catergory/list.php";
             break;        
         //product
+=======
+            $listcatergory = loadall_catergory();
+            include "catergory/list.php";
+            break;
+            //product
+>>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
         case 'listproduct':
-            if(isset($_POST['listok'])&&($_POST['listok'])){
-                $kyw=$_POST['kyw'];
-                $id_brand=$_POST['id_brand'];
-            }else{
-                $kyw='';
-                $id_brand=0;
-            }    
-            $listbrand=loadall_brand();
-            $listproduct=loadall_product($kyw,$id_brand);
+            if (isset($_POST['listok']) && ($_POST['listok'])) {
+                $kyw = $_POST['kyw'];
+                $id_brand = $_POST['id_brand'];
+            } else {
+                $kyw = '';
+                $id_brand = 0;
+            }
+            $listbrand = loadall_brand();
+            $listproduct = loadall_product($kyw, $id_brand);
             include "product/list.php";
             break;
-       
-        case 'addproduct': 
-            if(isset($_POST['themsp'])&&($_POST['themsp'])){
+
+        case 'addproduct':
+            if (isset($_POST['themsp']) && ($_POST['themsp'])) {
 
 
                 $name_product = $_POST['name_product'];
@@ -225,30 +271,36 @@ if(isset($_GET['act'])){
 
 
 
-                $file=$_FILES['img_product'];
-                $img_product=$file['name'];
-                move_uploaded_file($file['tmp_name'],"../upload/".$img_product);
+                // $file = $_FILES['img_product'];
+                // $img_product = $file['name'];
+                $target_dir = "../upload/";
+                // ---------------- FUNCTION ------------------//
+                $file_name = save_file('img_product', $target_dir);
+                $img = $file_name ? $file_name : "no photo";
 
-                insert_product($name_product,$id_brand,$id_color,$id_sport,$id_size,$id_catergory,$img_product,$sale,$price,$quanity,$date_product,$view,$description);
-                $thongbao="them thanh cong";
+                // move_uploaded_file($file['tmp_name'], "../upload/" . $img_product);
+
+                insert_product($name_product, $id_brand, $id_color, $id_sport, $id_size, $id_catergory, $img, $sale, $price, $quanity, $date_product, $view, $description);
+                $thongbao = "them thanh cong";
             }
-            $listbrand = loadall_brand();    
-            $listcolor = loadall_color();     
-            $listsport = loadall_sport();   
-            $listsize = loadall_size();   
-            $listcatergory = loadall_catergory();         
+            $listbrand = loadall_brand();
+            $listcolor = loadall_color();
+            $listsport = loadall_sport();
+            $listsize = loadall_size();
+            $listcatergory = loadall_catergory();
             include "product/add.php";
             break;
 
         case 'deleteproduct':
-        if(isset($_GET['id_product'])&&($_GET['id_product']>0)){
-            delete_product($_GET['id_product']);
-        }
-            $listbrand=loadall_brand();
-            $listproduct=loadall_product('',0);
+            if (isset($_GET['id_product']) && ($_GET['id_product'] > 0)) {
+                delete_product($_GET['id_product']);
+            }
+            $listbrand = loadall_brand();
+            $listproduct = loadall_product('', 0);
             include "product/list.php";
-            break;     
+            break;
 
+<<<<<<< HEAD
         case 'editproduct':
             if(isset($_GET['id_product'])&&($_GET['id_product']>0)){
                 $product=loadone_product($_GET['id_product']);
@@ -316,34 +368,43 @@ if(isset($_GET['act'])){
 
         //comment    
         case 'listcomment':      
+=======
+            //comment    
+        case 'listcomment':
+>>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
             include "comment/list.php";
             break;
 
 
+<<<<<<< HEAD
         //customer
         case 'listcustomer':   
             $listcustomer = loadall_customer();   
+=======
+            //customer
+        case 'listcustomer':
+>>>>>>> f2d530f9433419d44b8e0a34b9f49b60a21a3b73
             include "Customer/list.php";
             break;
 
-        //cart
-        case 'listcart':      
+            //cart
+        case 'listcart':
             include "cart/list.php";
             break;
 
 
-        //order
-        case 'listorder':      
+            //order
+        case 'listorder':
             include "order/list.php";
             break;
-        
-        //order
-        case 'listorder_item':      
+
+            //order
+        case 'listorder_item':
             include "order_item/list.php";
             break;
 
 
-    
+
 
 
 
@@ -357,11 +418,9 @@ if(isset($_GET['act'])){
             include "home.php";
             break;
     }
-}else{
+} else {
     include "home.php";
 }
 
 
 include "footer.php";
-
-?>
