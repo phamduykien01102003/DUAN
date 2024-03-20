@@ -22,8 +22,8 @@
                 <td></td>
                 <td>'.$id_catergory.'</td>
                 <td>'.$name_catergory.'</td>
-                <td> <a href="'.$editcatergory.'"  class="btn btn-outline-dark">edit</a>
-                <a href="'.$deletecatergory.'"  class="btn btn-outline-dark">delete</a></td>
+                <td> <a href="'.$editcatergory.'"  class="btn btn-outline-success"edit</a>
+                <a href="'.$deletecatergory.'"  class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?> 

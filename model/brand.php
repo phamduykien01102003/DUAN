@@ -13,13 +13,13 @@ function delete_brand($id_brand){
     $listbrand=pdo_query($sql);
     return $listbrand;
  }
-//  function app_danhmuc($id){
-//     $sql="SELECT * FROM danhmuc WHERE id=".$id;
-//     $danhmuc=pdo_query_one($sql);
-//     return $danhmuc;
-//  }
-//  function update_danhmuc($tenloai,$id){
-//     $sql="UPDATE danhmuc SET name='".$tenloai."' WHERE id=".$id;
-//     pdo_execute($sql);
-//  }
+ function loadone_brand($id_brand){
+    $sql="SELECT * FROM brand WHERE id_brand=".$id_brand;
+    $brand=pdo_query_one($sql);
+    return $brand;
+ }
+ function update_brand($name_brand,$id_brand){
+    $sql="UPDATE brand SET name_brand='".$name_brand."' WHERE id_brand=".$id_brand;
+    pdo_execute($sql);
+ }
 ?>

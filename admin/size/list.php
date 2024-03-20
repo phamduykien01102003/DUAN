@@ -22,8 +22,8 @@
                 <td></td>
                 <td>'.$id_size.'</td>
                 <td>'.$name_size.'</td>
-                <td> <a href="'.$editsize.'"  class="btn btn-outline-dark">edit</a>
-                <a href="'.$deletesize.'"  class="btn btn-outline-dark">delete</a></td>
+                <td> <a href="'.$editsize.'" class="btn btn-outline-success">edit</a>
+                <a href="'.$deletesize.'" class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?>   

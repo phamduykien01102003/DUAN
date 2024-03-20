@@ -22,8 +22,8 @@
                 <td></td>
                 <td>'.$id_color.'</td>
                 <td>'.$name_color.'</td>
-                <td> <a href="'.$editcolor.'"  class="btn btn-outline-dark">edit</a>
-                <a href="'.$deletecolor.'"  class="btn btn-outline-dark">delete</a></td>
+                <td> <a href="'.$editcolor.'"  class="btn btn-outline-success">edit</a>
+                <a href="'.$deletecolor.'" class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?>   

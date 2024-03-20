@@ -22,8 +22,8 @@
                 <td></td>
                 <td>'.$id_sport.'</td>
                 <td>'.$name_sport.'</td>
-                <td> <a href="'.$editsport.'"  class="btn btn-outline-dark">edit</a>
-                <a href="'.$deletesport.'"  class="btn btn-outline-dark">delete</a></td>
+                <td> <a href="'.$editsport.'"  class="btn btn-outline-success">edit</a>
+                <a href="'.$deletesport.'"  class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?> 

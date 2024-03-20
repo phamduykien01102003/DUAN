@@ -10,55 +10,32 @@
                 <th scope="col">name Customer</th>
                 <th scope="col">email</th>
                 <th scope="col">password</th>
-                <th scope="col">address</th>
-                <th scope="col">phone </th>
                 <th scope="col">active</th>
                 <th scope="col">role</th>
-               
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <th scope="row"></th>
-                <td>1</td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-             
-                
-                
-                
-                <td><button  class="btn btn-outline-success">xóa</button> <button class="btn btn-outline-success">sửa</button></td>
-            </tr>
-            <tr>
-            <th scope="row"></th>
-                <td>2</td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td><button  class="btn btn-outline-success">xóa</button> <button class="btn btn-outline-success">sửa</button></td>
-            </tr>
-            <tr>
-            <th scope="row"></th>
-                <td>3</td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td>xanh </td>
-                <td><button  class="btn btn-outline-success">xóa</button> <button class="btn btn-outline-success">sửa</button></td>
-            </tr>
+        <?php
+              foreach($listcustomer as $customer) {
+                extract($customer);
+                $editcustomer=   "index.php?act=editcustomer&id_customer=".$id_customer;
+                $deletecustomer= "index.php?act=deletecustomer&id_customer=".$id_customer;
+                echo '<tr>
+                <td></td>
+                <td>'.$id_customer.'</td>
+                <td>'.$name_customer.'</td>
+                <td>'.$email_customer.'</td>
+                <td>'.$password_customer.'</td>
+                <td>'.$active.'</td>
+                <td>'.$role.'</td>
+                <td> <a href="'.$editcustomer.'"  class="btn btn-outline-success">edit</a>
+                <a href="'.$deletecustomer.'"  class="btn btn-outline-success">delete</a></td>
+               </tr>';
+            }  
+             ?>   
+
+          
         
         </tbody>
        

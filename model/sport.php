@@ -13,13 +13,13 @@ function delete_sport($id_sport){
     $listsport=pdo_query($sql);
     return $listsport;
  }
-//  function app_danhmuc($id){
-//     $sql="SELECT * FROM danhmuc WHERE id=".$id;
-//     $danhmuc=pdo_query_one($sql);
-//     return $danhmuc;
-//  }
-//  function update_danhmuc($tenloai,$id){
-//     $sql="UPDATE danhmuc SET name='".$tenloai."' WHERE id=".$id;
-//     pdo_execute($sql);
-//  }
+ function loadone_sport($id_sport){
+    $sql="SELECT * FROM sport WHERE id_sport=".$id_sport;
+    $sport=pdo_query_one($sql);
+    return $sport;
+ }
+ function update_sport($name_sport,$id_sport){
+    $sql="UPDATE sport SET name_sport='".$name_sport."' WHERE id_sport=".$id_sport;
+    pdo_execute($sql);
+ }
 ?>

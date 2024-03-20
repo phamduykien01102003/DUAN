@@ -13,13 +13,13 @@ function delete_catergory($id_catergory){
     $listcatergory=pdo_query($sql);
     return $listcatergory;
  }
-//  function app_danhmuc($id){
-//     $sql="SELECT * FROM danhmuc WHERE id=".$id;
-//     $danhmuc=pdo_query_one($sql);
-//     return $danhmuc;
-//  }
-//  function update_danhmuc($tenloai,$id){
-//     $sql="UPDATE danhmuc SET name='".$tenloai."' WHERE id=".$id;
-//     pdo_execute($sql);
-//  }
+ function loadone_catergory($id_catergory){
+    $sql="SELECT * FROM catergory WHERE id_catergory=".$id_catergory;
+    $catergory=pdo_query_one($sql);
+    return $catergory;
+ }
+ function update_catergory($name_catergory,$id_catergory){
+    $sql="UPDATE catergory SET name_catergory='".$name_catergory."' WHERE id_catergory=".$id_catergory;
+    pdo_execute($sql);
+ }
 ?>

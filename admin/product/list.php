@@ -61,8 +61,8 @@
               
                 <td>'.$view.'</td>
                 <td>'.$hinhanh.'</td>
-                <td> <a href="'.$editproduct.'"  class="btn btn-outline-dark">edit</a>
-                <a href="'.$deleteproduct.'"  class="btn btn-outline-dark">delete</a></td>
+                <td> <a href="'.$editproduct.'"  class="btn btn-outline-success">edit</a>
+                <a href="'.$deleteproduct.'"  class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?>   
