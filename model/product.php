@@ -55,12 +55,14 @@ function delete_product($id_product){
 
  function update_product($id_product,$name_product,$id_brand,$id_color,$id_sport,$id_size,$id_catergory,$img_product,$sale,$price,$quanity,$date_product,$view,$description){
    if($img_product!=""){
-      $sql="UPDATE product SET name_product='".$name_product."',id_brand='".$id_brand."',id_color='".$id_color."',id_sport='".$id_sport."',id_size='".$id_size."', $id_catergory='".$id_catergory."', img_product='".$img_product."', sale='".$sale."', price='".$price."', quanity='".$quanity."', date_product='".$date_product."', view='".$view."', description='".$description."'    WHERE id_product=".$id_product;
+      $sql="UPDATE product SET name_product='".$name_product."',id_brand='".$id_brand."',id_color='".$id_color."',id_sport='".$id_sport."',id_size='".$id_size."', id_catergory='".$id_catergory."', img_product='".$img_product."', sale='".$sale."', price='".$price."', quanity='".$quanity."', date_product='".$date_product."', view='".$view."', description='".$description."'    WHERE id_product=".$id_product;
    }else{
       $sql="UPDATE product SET name_product='".$name_product."',id_brand='".$id_brand."',id_color='".$id_color."',id_sport='".$id_sport."',id_size='".$id_size."', $id_catergory='".$id_catergory."',  sale='".$sale."', price='".$price."', quanity='".$quanity."', date_product='".$date_product."', view='".$view."', description='".$description."'    WHERE id_product=".$id_product;
    } 
     pdo_execute($sql);
  }
+
+
 
 
 //  function update_product($id_product,$name_product,$id_brand,$id_color,$id_sport,$id_size,$id_catergory,$img_product,$sale,$price,$quanity,$date_product,$view,$description){
