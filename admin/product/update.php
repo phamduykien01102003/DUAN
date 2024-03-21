@@ -53,20 +53,26 @@ $hinhpath="../upload/".$img_product;
     </div>
  
     
-                    
+               
 
     <div class="col-md-4 mb-3">
         <label for="inputPassword4" class="form-label">COLOR</label>
         <select class="form-select" id="validationDefault04" name="id_color" >
                 <option selected disabled value=""> mã color</option>
-               <?php  foreach($listcolor as $color){
+             <?php 
+                 foreach($listcolor as $color){
                    extract($color);
-                   echo '<option value="'.$id_color.'">'.$name_color.'</option>';
+                   if($id_color==$id_color) $s="selected"; else $s="";
+                   echo '<option value="'.$id_color.'" '.$s.'>'.$name_color.'</option>';
                }
                   ?>
                  
              </select>
+             <?php
+                    extract($product);
+             ?>
     </div>
+
 
     <div class="col-md-4 mb-3">
         <label for="inputPassword4" class="form-label">SPORT PRODUCT</label>
@@ -74,11 +80,15 @@ $hinhpath="../upload/".$img_product;
                 <option selected disabled value=""> mã sport product</option>
                <?php  foreach($listsport as $sport){
                    extract($sport);
-                   echo '<option value="'.$id_sport.'">'.$name_sport.'</option>';
+                   if($id_sport==$id_sport) $s="selected"; else $s="";
+                   echo '<option value="'.$id_sport.'" '.$s.'>'.$name_sport.'</option>';
                }
                   ?>
                  
              </select>
+             <?php
+                    extract($product);
+             ?>
     </div>
 
     <div class="col-md-4 mb-3">
@@ -87,11 +97,16 @@ $hinhpath="../upload/".$img_product;
                 <option selected disabled value=""> mã size</option>
                <?php  foreach($listsize as $size){
                    extract($size);
-                   echo '<option value="'.$id_size.'">'.$name_size.'</option>';
+                   if($id_size==$id_size) $s="selected"; else $s="";
+                   echo '<option value="'.$id_size.'" '.$s.'>'.$name_size.'</option>';
+                   
                }
                   ?>
                  
              </select>
+             <?php
+                    extract($product);
+             ?>
     </div>
 
     <div class="col-md-4 mb-3">
@@ -100,11 +115,15 @@ $hinhpath="../upload/".$img_product;
                 <option selected disabled value=""> mã catergory</option>
                <?php  foreach($listcatergory as $catergory){
                    extract($catergory);
-                   echo '<option value="'.$id_catergory.'">'.$name_catergory.'</option>';
+                   if($id_catergory==$id_catergory) $s="selected"; else $s="";
+                   echo '<option value="'.$id_catergory.'" '.$s.'>'.$name_catergory.'</option>';
+                 
                }
                   ?>
-                 
              </select>
+             <?php
+                    extract($product);
+             ?>
     </div>
 
 
@@ -113,7 +132,7 @@ $hinhpath="../upload/".$img_product;
    
     <div class="col-md-4 mb-3">
         <label for="inputPassword4" class="form-label">IMAGE PRODUCT</label>
-        <input class="form-control" type="file" name="img_product">
+        <input class="form-control" type="file" name="img_product" >
     </div>
 
     

@@ -92,17 +92,14 @@
         <div class="admin">
             <div class="box-1 s1">
                 <div>
-                    <img src="https://png.pngtree.com/png-vector/20230120/ourmid/pngtree-beauty-logo-design-png-image_6568470.png" alt="" style="height: 150px; width: 150px;">
+                    <img src="https://png.pngtree.com/png-vector/20230120/ourmid/pngtree-beauty-logo-design-png-image_6568470.png" alt="" style="height: 90px; width: 90px; text-align: center;">
                 </div>
-                <br>
-                <br>
+                <br>  
                 <p class="fw-normal">Admin tool</p>
-        
                 <div class="list-group">
                     <a href="index.php" class="list-group-item list-group-item-action active" aria-current="true">
                        trang chủ 
                     </a>
-                    
                     <a class="list-group-item list-group-item-action" href="index.php?act=listbrand" style="color:black;">brand </a>
                     <a class="list-group-item list-group-item-action" href="index.php?act=listsize" style="color:black;" >size</a>
                     <a class="list-group-item list-group-item-action" href="index.php?act=listsport" style="color:black;" >sport</a>
@@ -114,6 +111,7 @@
                     <a class="list-group-item list-group-item-action" href="index.php?act=listcart" style="color:black;" >cart</a>
                     <a class="list-group-item list-group-item-action" href="index.php?act=listorder" style="color:black;" >order</a>
                     <a class="list-group-item list-group-item-action" href="" style="color:black;" >thống kê</a>
+                 
                     
 
                     
