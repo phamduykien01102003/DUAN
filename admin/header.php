@@ -66,10 +66,10 @@
                 <div class="navbar-nav w-100">
                     <a href="index.php" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Trang chu</a>
                     <a href="index.php?act=listbrand" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>brand</a>
-                    <a href="index.php?act=listbrand" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>color</a>
-                    <a href="index.php?act=listbrand" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>sport</a>
-                    <a href="index.php?act=listbrand" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>size</a> 
-                    <a href="index.php?act=listbrand" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>catergory</a>
+                    <a href="index.php?act=listcolor" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>color</a>
+                    <a href="index.php?act=listsport" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>sport</a>
+                    <a href="index.php?act=listsize" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>size</a> 
+                    <a href="index.php?act=listcatergory" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>catergory</a>
                     <a href="index.php?act=listproduct" class="nav-item nav-link"><i class="fa fa-table me-2"></i>product</a>
                     <a href="index.php?act=listcustomer" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>customer</a>
                     <a href="index.php?act=dstk" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Thong ke</a>

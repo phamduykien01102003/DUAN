@@ -89,12 +89,7 @@ switch ($act) {
         include "size/list.php";
         break;
     //sport
-    case 'listsport':  
-        $listsport = loadall_sport();        
-
-        $listsize = loadall_size();
-        include "size/list.php";
-        break;
+    
 
         //sport
     case 'listsport':
@@ -136,12 +131,7 @@ switch ($act) {
 
 
     //color
-    case 'listcolor':  
-        $listcolor = loadall_color();        
-
-        $listsport = loadall_sport();
-        include "sport/list.php";
-        break;
+ 
         //color
     case 'listcolor':
         $listcolor = loadall_color();
@@ -178,13 +168,8 @@ switch ($act) {
         $listcolor=loadall_color();
         include "color/list.php";
         break;
-    //catergory    
-    case 'listcatergory':   
-        $listcatergory = loadall_catergory();      
-
-        $listcolor = loadall_color();
-        include "color/list.php";
-        break;
+  
+  
 
         //catergory    
     case 'listcatergory':
