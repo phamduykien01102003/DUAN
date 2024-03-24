@@ -19,7 +19,7 @@ $hinhpath="../upload/".$img_product;
 
 
 
-<h1 class="alert alert-success" style="color: green"> Thêm mới PRODUCT </h1>
+<h1 class="alert alert-success" style="color: green"> sửa PRODUCT </h1>
 
 <form action="index.php?act=updateproduct" method="post" id="form" enctype="multipart/form-data" class="row mt-3">
     <div class="col-md-4 mb-3">

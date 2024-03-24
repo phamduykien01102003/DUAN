@@ -1,7 +1,7 @@
 
 
 <div>
-<h1 class="alert alert-success" style="color: green"> Danh sách Brand </h1>
+<h1 class="alert alert-success" style="color: green"> Danh sách color </h1>
     <table class="table ">
         <thead>
             <tr class="table-success">

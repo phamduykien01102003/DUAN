@@ -6,7 +6,7 @@ if(is_array($sport)){
 
 
     <div>
-<h1 class="alert alert-success" style="color: green"> sửa size</h1>
+<h1 class="alert alert-success" style="color: green"> sửa sport</h1>
 
 <form action="index.php?act=updatesport" method="post">
 
