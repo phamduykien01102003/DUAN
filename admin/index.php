@@ -227,6 +227,22 @@ switch ($act) {
         include "product/list.php";
         break;
 
+
+
+        // case 'listsp':
+        //     if(isset($_POST['listok'])&&($_POST['listok'])){
+        //         $kyw=$_POST['kyw'];
+        //         $iddm=$_POST['iddm'];
+        //     }else{
+        //         $kyw='';
+        //         $iddm=0;
+        //     }    
+        //     $listdm=loadall_danhmuc();
+        //     $listsp=loadall_sanpham($kyw,$iddm);
+        //     include "sanpham/list.php";
+        //     break;
+
+
     case 'addproduct':
         if (isset($_POST['themsp']) && ($_POST['themsp'])) {
 

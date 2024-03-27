@@ -1,7 +1,7 @@
 <div>
     <h1 class="alert alert-success" style="color: green"> Danh sách Product</h1>
 
-    <form action="#" method="post">
+   <form action="#" method="post">
         <input type="text" name="kyw" id="" style="height: 37px;width: 200px;border-radius: 7px;;">
         <select name="id_brand" id="" style="height: 37px;width: 70px;border-radius: 7px;;">
             <option value="0" select>ALL</option>
@@ -15,8 +15,17 @@
 
 
         <button type="submit" name="listok" value="GO" class="btn btn-success">check</button>
-        <!-- <input class="btn btn-primary" type="submit" name="listok" value="GO" > -->
-    </form>
+    
+    </form> 
+  
+
+
+
+
+
+
+
+
     <br>
     <table class="table ">
         <thead>
@@ -24,11 +33,8 @@
                 <th scope="col">#</th>
                 <th scope="col">mã product</th>
                 <th scope="col">name product</th>
-                <th scope="col">brand </th>
-               
-               
-                <th scope="col">size </th>
-             
+                <th scope="col">price </th>            
+                <th scope="col">quanity</th>
                 <th scope="col">view</th>
                 <th scope="col">image</th>
                 <th scope="col"></th>
@@ -52,9 +58,10 @@
                 <td></td>
                 <td>' . $id_product . '</td>
                 <td>' . $name_product . '</td>
-                <td>' . $name_brand . '</td>
+                <td>' . $price. '</td>
+                <td>' . $quanity. '</td>
                
-                <td>' . $name_size . '</td>
+              
               
 
               
