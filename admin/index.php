@@ -227,22 +227,20 @@ switch ($act) {
         include "product/list.php";
         break;
 
-
-
-        // case 'listsp':
-        //     if(isset($_POST['listok'])&&($_POST['listok'])){
-        //         $kyw=$_POST['kyw'];
-        //         $iddm=$_POST['iddm'];
-        //     }else{
-        //         $kyw='';
-        //         $iddm=0;
-        //     }    
-        //     $listdm=loadall_danhmuc();
-        //     $listsp=loadall_sanpham($kyw,$iddm);
-        //     include "sanpham/list.php";
-        //     break;
-
-
+    case 'detailproduct':
+   
+        if(isset($_GET['id_product'])&&($_GET['id_product']>0)){
+            $product=loadone_product($_GET['id_product']);
+        }
+        $listbrand = loadall_brand();    
+        $listcolor = loadall_color();     
+        $listsport = loadall_sport();   
+        $listsize = loadall_size();   
+        $listcatergory = loadall_catergory();    
+     
+        include "product/list-ct.php";
+        break;
+        
     case 'addproduct':
         if (isset($_POST['themsp']) && ($_POST['themsp'])) {
 

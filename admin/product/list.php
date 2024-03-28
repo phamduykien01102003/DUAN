@@ -19,13 +19,6 @@
     </form> 
   
 
-
-
-
-
-
-
-
     <br>
     <table class="table ">
         <thead>
@@ -46,6 +39,7 @@
                 extract($product);
                 $editproduct =   "index.php?act=editproduct&id_product=" . $id_product;
                 $deleteproduct = "index.php?act=deleteproduct&id_product=" . $id_product;
+                $detailproduct= "index.php?act=detailproduct&id_product=".$id_product;
                 $hinhpath = "../upload/" . $img_product;
                 if (is_file($hinhpath)) {
                     $hinhanh = "<img src='" . $hinhpath . "' width='80'>";
@@ -57,25 +51,18 @@
                 echo '<tr>
                 <td></td>
                 <td>' . $id_product . '</td>
-                <td>' . $name_product . '</td>
+                <td> '.$name_product.'</td>
                 <td>' . $price. '</td>
                 <td>' . $quanity. '</td>
-               
-              
-              
-
-              
                 <td>'.$view.'</td>
                 <td>'.$hinhanh.'</td>
                 <td> <a href="'.$editproduct.'"  class="btn btn-outline-success">edit</a>
-                <a href="' . $deleteproduct . '"  class="btn btn-outline-success">delete</a></td>
+                <a href="' . $deleteproduct . '"  class="btn btn-outline-success">delete</a>
+                <a href="' . $detailproduct . '"  class="btn btn-outline-success">detail</a>
+                </td>
                </tr>';
             }
             ?>
-
-
-
-
         </tbody>
 
     </table>
