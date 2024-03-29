@@ -57,7 +57,7 @@
                 <td>'.$view.'</td>
                 <td>'.$hinhanh.'</td>
                 <td> <a href="'.$editproduct.'"  class="btn btn-outline-success">edit</a>
-                <a href="' . $deleteproduct . '"  class="btn btn-outline-success">delete</a>
+                <a onclick="return confirm(\'Bạn chắc chắn muốn xóa\')"  href="' . $deleteproduct . '"  class="btn btn-outline-success">delete</a>
                 <a href="' . $detailproduct . '"  class="btn btn-outline-success">detail</a>
                 </td>
                </tr>';

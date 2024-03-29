@@ -23,7 +23,7 @@
                 <td>'.$id_sport.'</td>
                 <td>'.$name_sport.'</td>
                 <td> <a href="'.$editsport.'"  class="btn btn-outline-success">edit</a>
-                <a href="'.$deletesport.'"  class="btn btn-outline-success">delete</a></td>
+                <a onclick="return confirm(\'Bạn chắc chắn muốn xóa\')" href="'.$deletesport.'"  class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?> 

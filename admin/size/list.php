@@ -23,7 +23,7 @@
                 <td>'.$id_size.'</td>
                 <td>'.$name_size.'</td>
                 <td> <a href="'.$editsize.'" class="btn btn-outline-success">edit</a>
-                <a href="'.$deletesize.'" class="btn btn-outline-success">delete</a></td>
+                <a onclick="return confirm(\'Bạn chắc chắn muốn xóa\')" href="'.$deletesize.'" class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?>   

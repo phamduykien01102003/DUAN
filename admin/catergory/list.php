@@ -23,7 +23,7 @@
                 <td>'.$id_catergory.'</td>
                 <td>'.$name_catergory.'</td>
                 <td> <a href="'.$editcatergory.'"  class="btn btn-outline-success">edit</a>
-                <a href="'.$deletecatergory.'"  class="btn btn-outline-success">delete</a></td>
+                <a onclick="return confirm(\'Bạn chắc chắn muốn xóa\')" href="'.$deletecatergory.'"  class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?> 

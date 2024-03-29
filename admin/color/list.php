@@ -23,7 +23,7 @@
                 <td>'.$id_color.'</td>
                 <td>'.$name_color.'</td>
                 <td> <a href="'.$editcolor.'"  class="btn btn-outline-success">edit</a>
-                <a href="'.$deletecolor.'" class="btn btn-outline-success">delete</a></td>
+                <a onclick="return confirm(\'Bạn chắc chắn muốn xóa\')" href="'.$deletecolor.'" class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?>   

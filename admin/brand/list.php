@@ -23,7 +23,7 @@
                 <td>'.$id_brand.'</td>
                 <td>'.$name_brand.'</td>
                 <td> <a href="'.$editbrand.'"  class="btn btn-outline-success">edit</a>
-                <a href="'.$deletebrand.'"  class="btn btn-outline-success">delete</a></td>
+               <a  onclick="return confirm(\'Bạn chắc chắn muốn xóa\')"  href="'.$deletebrand.'"  class="btn btn-outline-success">delete</a></td>
                </tr>';
             }  
              ?>   
