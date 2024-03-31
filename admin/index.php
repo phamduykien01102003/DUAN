@@ -8,6 +8,7 @@ include "../model/catergory.php";
 include "../model/product.php";
 include "../model/customer.php";
 include "../model/comment.php";
+include "../model/order.php";
 
 
 include "header.php";
@@ -371,13 +372,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
             //order
         case 'listorder':
+            $listorder = show_order();
             include "order/list.php";
             break;
 
-            //order
-        case 'listorder_item':
-            include "order_item/list.php";
-            break;
 
         default:
             include "home.php";
