@@ -376,6 +376,23 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "order/list.php";
             break;
 
+            //update order
+        case 'updateOrd':
+            // $listorder = show_order();
+            // echo $_GET['id_order'];
+            $one_order = show_one_order($_GET['id_order']);
+            extract($one_order);
+            if (isset($_POST['capnhatOrder'])) {
+                $id_order = $_GET['id_order'];
+                $status_order = $_POST['status_order'];
+                update_status_order($id_order, $status_order);
+                $thongbao = "Update Successfully";
+            }
+
+            include "order/update.php";
+            break;
+
+
 
         default:
             include "home.php";

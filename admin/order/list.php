@@ -28,7 +28,7 @@
                 <td>' . $total_price . '$</td>
 
                 <td>
-                <a href="act=update&id_order=' . $id_order . '"><button class="btn btn-outline-success">Update</button></a>
+                <a href="index.php?act=updateOrd&id_order=' . $id_order . '"><button class="btn btn-outline-success">Update</button></a>
                 </td>
             </tr>
                 ';
