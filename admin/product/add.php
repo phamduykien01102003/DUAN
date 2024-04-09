@@ -88,7 +88,7 @@
 
     <div class="col-md-4 mb-3">
         <label for="inputPassword4" class="form-label">QUANTITY</label>
-        <input class="form-control" type="text" name="quantity" id="quantity">
+        <input class="form-control" type="text" name="quanity" id="quanity">
     </div>
 
     <div class="col-md-4 mb-3">
@@ -112,6 +112,41 @@
         <a href="index.php?act=listproduct" class="btn btn-primary"> danh sách </a>
     </div>
 
+    <script type="text/javascript">
+    function validateForm() {
+        var quanity = document.getElementById('quanity').value;
+        var name_product = document.getElementById('name_product').value;
+        var id_brand = document.getElementById('id_brand').value;
+        var id_color = document.getElementById('id_color').value;
+        var id_sport = document.getElementById('id_sport').value;
+        var id_size = document.getElementById('id_size').value;
+        var id_catergory = document.getElementById('id_catergory').value;
+        var img_product = document.getElementById('img_product').value;
+        var sale = document.getElementById('sale').value;
+        var price = document.getElementById('price').value;
+        var date_product = document.getElementById('date_product').value;
+        var view = document.getElementById('view').value;
+
+        if (name_product.trim() == '' || id_brand.trim() == '' || id_color.trim() == '' || id_sport.trim() == '' || id_size.trim() == '' || id_catergory.trim() == '' || img_product.trim() == '' || sale.trim() == '' || price.trim() == '' || quanity.trim() == '' || date_product.trim() == '' || view.trim() == '') {
+            alert('Vui lòng nhập đầy đủ thông tin vào các trường bắt buộc.');
+            return false;
+        }
+        if (parseInt(quanity) < 0 || parseInt(price) < 0) {
+            if (parseInt(quanity) < 0) {
+                alert("Quanity can not be negative");
+            }
+            if (parseInt(price) < 0) {
+                alert("Price can not be negative");
+            }
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+
+
 
     <?php
     if (isset($thongbao) && ($thongbao != "")) {
@@ -121,25 +156,3 @@
 
 </form>
 
-<script>
-        function validateForm() {
-            var name_product = document.getElementById('name_product').value;
-            var id_brand = document.getElementById('id_brand').value;
-            var id_color = document.getElementById('id_color').value;
-            var id_sport = document.getElementById('id_sport').value;
-            var id_size = document.getElementById('id_size').value;
-            var id_catergory = document.getElementById('id_catergory').value;
-            var img_product = document.getElementById('img_product').value;
-            var sale = document.getElementById('sale').value;
-            var price = document.getElementById('price').value;
-            var quantity = document.getElementById('quantity').value;
-            var date_product = document.getElementById('date_product').value;
-            var view = document.getElementById('view').value;
-
-            if (name_product.trim() == '' || id_brand.trim() == '' || id_color.trim() == '' || id_sport.trim() == '' || id_size.trim() == '' || id_catergory.trim() == '' || img_product.trim() == '' || sale.trim() == '' || price.trim() == '' || quantity.trim() == '' || date_product.trim() == '' || view.trim() == '') {
-                alert('Vui lòng nhập đầy đủ thông tin vào các trường bắt buộc.');
-                return false;
-            }
-            return true;
-        }
-    </script>
